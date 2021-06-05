@@ -3,23 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
-
+    app:startDestination="@id/cartelera">
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.example.ponycinev2.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
-
+        android:id="@+id/cartelera"
+        android:name="com.example.ponycinev2.ui.Cartelera"
+        android:label="Cartelera"
+        tools:layout="@layout/cartelera_fragment" />
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.ponycinev2.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
-
+        android:id="@+id/alimentos"
+        android:name="com.example.ponycinev2.ui.Alimentos"
+        android:label="Alimentos"
+        tools:layout="@layout/alimentos_fragment" />
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.ponycinev2.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/miPerfil"
+        android:name="com.example.ponycinev2.ui.MiPerfil"
+        android:label="Mi Perfil"
+        tools:layout="@layout/mi_perfil_fragment" />
 </navigation>
