@@ -8,7 +8,11 @@
         android:id="@+id/cartelera"
         android:name="com.example.ponycinev2.ui.Cartelera"
         android:label="Cartelera"
-        tools:layout="@layout/cartelera_fragment" />
+        tools:layout="@layout/cartelera_fragment" >
+        <action
+            android:id="@+id/action_cartelera_to_horariosPelicula"
+            app:destination="@id/horariosPelicula" />
+    </fragment>
     <fragment
         android:id="@+id/alimentos"
         android:name="com.example.ponycinev2.ui.Alimentos"
@@ -19,4 +23,9 @@
         android:name="com.example.ponycinev2.ui.MiPerfil"
         android:label="Mi Perfil"
         tools:layout="@layout/mi_perfil_fragment" />
+    <fragment
+        android:id="@+id/horariosPelicula"
+        android:name="com.example.ponycinev2.HorariosPelicula"
+        android:label="horarios_pelicula_fragment"
+        tools:layout="@layout/horarios_pelicula_fragment" />
 </navigation>

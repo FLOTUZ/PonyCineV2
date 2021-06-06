@@ -9,23 +9,7 @@
 
     <string name="init_database">
         {
-          "peliculas": [
-            {
-              "id": 1,
-              "nombre": "'Peli de Prueba'",
-              "img": 1,
-              "exibicion": [
-                {
-                  "fecha": "'05-06-2021'",
-                  "hora": "'00:00:00'"
-                },
-                {
-                  "fecha": "'05-06-2021'",
-                  "hora": "'01:00:00'"
-                }
-              ]
-            },
-          ],
+          "peliculas": [],
           "compras": [
             {
               "id": 1,
