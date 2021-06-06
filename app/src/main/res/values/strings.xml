@@ -6,4 +6,35 @@
     <string name="cartelera">Cartelera</string>
     <string name="alimentos">Alimentos</string>
     <string name="mi_perfil">Mi perfil</string>
+
+    <string name="init_database">
+        {
+          "peliculas": [
+            {
+              "id": 1,
+              "nombre": "'Peli de Prueba'",
+              "img": 1,
+              "exibicion": [
+                {
+                  "fecha": "'05-06-2021'",
+                  "hora": "'00:00:00'"
+                },
+                {
+                  "fecha": "'05-06-2021'",
+                  "hora": "'01:00:00'"
+                }
+              ]
+            },
+          ],
+          "compras": [
+            {
+              "id": 1,
+              "pelicula": 1,
+              "asientos": [1, 2],
+              "hora": "'00:00:00'",
+              "fecha": "'05-06-2021'"
+            }
+          ]
+        }
+    </string>
 </resources>

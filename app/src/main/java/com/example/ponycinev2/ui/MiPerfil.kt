@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
 import com.example.ponycinev2.R
 
 class MiPerfil : Fragment() {
@@ -14,7 +16,7 @@ class MiPerfil : Fragment() {
         fun newInstance() = MiPerfil()
     }
 
-    private lateinit var viewModel: GlobalViewModel
+    private val viewModel: GlobalViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,8 +27,6 @@ class MiPerfil : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(GlobalViewModel::class.java)
-        // TODO: Use the ViewModel
     }
 
 }

@@ -6,15 +6,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
 import com.example.ponycinev2.R
+import com.example.ponycinev2.databinding.CarteleraFragmentBinding
 
 class Cartelera : Fragment() {
 
-    companion object {
-        fun newInstance() = Cartelera()
-    }
+    private val viewModel: GlobalViewModel by activityViewModels()
 
-    private lateinit var viewModel: GlobalViewModel
+    private var _binding: CarteleraFragmentBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,10 +26,10 @@ class Cartelera : Fragment() {
         return inflater.inflate(R.layout.cartelera_fragment, container, false)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(GlobalViewModel::class.java)
-        // TODO: Use the ViewModel
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
     }
+
 
 }

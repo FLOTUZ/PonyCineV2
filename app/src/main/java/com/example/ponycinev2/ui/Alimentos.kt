@@ -6,27 +6,40 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
 import com.example.ponycinev2.R
+import com.example.ponycinev2.databinding.AlimentosFragmentBinding
 
 class Alimentos : Fragment() {
 
-    companion object {
-        fun newInstance() = Alimentos()
-    }
+    private val viewModel: GlobalViewModel by activityViewModels()
 
-    private lateinit var viewModel: GlobalViewModel
+    private var _binding: AlimentosFragmentBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.alimentos_fragment, container, false)
+        _binding = AlimentosFragmentBinding.inflate(inflater, container, false)
+        val view = binding.root
+
+        return view
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(GlobalViewModel::class.java)
-        // TODO: Use the ViewModel
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.button2.setOnClickListener {
+            binding.button2.setOnClickListener {
+
+                viewModel.getBD.observe(viewLifecycleOwner, Observer {
+                    println(it)
+                })
+
+            }
+        }
     }
 
 }
