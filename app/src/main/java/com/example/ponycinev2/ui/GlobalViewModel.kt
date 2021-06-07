@@ -13,7 +13,7 @@ class GlobalViewModel : ViewModel() {
     private val dataBase = MutableLiveData<DataBase>()
     //-----------------------Datos de pelicula------------------------------------
     private val peliculaSeleccionada = MutableLiveData<Pelicula>()
-    private val horarioSeleccioado = MutableLiveData<Exibicion>()
+    private val horarioSeleccionado = MutableLiveData<Exibicion>()
 
     //-----------------------Getters de las 'tablas' y la BD----------------------
     val getBD: LiveData<DataBase> get() = dataBase
@@ -22,8 +22,12 @@ class GlobalViewModel : ViewModel() {
 
     //------------Getters de las preferencias de seleccion de la funcion---------
     val getPeliculaseleccionada: LiveData<Pelicula> get() = peliculaSeleccionada
-    val getHorarioSeleccionado: LiveData<Exibicion> get() = horarioSeleccioado
+    val getHorarioSeleccionado: LiveData<Exibicion> get() = horarioSeleccionado
 
+
+    fun setHorarioSeleccioado (horario: Exibicion){
+        horarioSeleccionado.value = horario
+    }
     fun getTiketById(id:Int): Compra? {
         //Se consulta el tiket respecto al id
         return dataBase.value?.compras?.get(id)
@@ -46,11 +50,7 @@ class GlobalViewModel : ViewModel() {
         }
     }
 
-    fun addCompra(compra: Compra) {
-        dataBase.value?.compras?.add(compra)
-    }
-
     fun setPeliculaSeleccionada(pelicula: Pelicula) {
-
+        peliculaSeleccionada.value = pelicula
     }
 }

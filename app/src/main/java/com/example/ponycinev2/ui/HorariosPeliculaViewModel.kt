@@ -1,4 +1,4 @@
-package com.example.ponycinev2
+package com.example.ponycinev2.ui
 
 import androidx.lifecycle.ViewModel
 

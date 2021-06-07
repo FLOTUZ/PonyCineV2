@@ -11,7 +11,9 @@
         tools:layout="@layout/cartelera_fragment" >
         <action
             android:id="@+id/action_cartelera_to_horariosPelicula"
-            app:destination="@id/horariosPelicula" />
+            app:destination="@id/horariosPelicula"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/alimentos"
@@ -25,7 +27,16 @@
         tools:layout="@layout/mi_perfil_fragment" />
     <fragment
         android:id="@+id/horariosPelicula"
-        android:name="com.example.ponycinev2.HorariosPelicula"
-        android:label="horarios_pelicula_fragment"
-        tools:layout="@layout/horarios_pelicula_fragment" />
+        android:name="com.example.ponycinev2.ui.HorariosPelicula"
+        android:label="Selecciona un horario"
+        tools:layout="@layout/horarios_pelicula_fragment" >
+        <action
+            android:id="@+id/action_horariosPelicula_to_seleccionarAsientos"
+            app:destination="@id/seleccionarAsientos" />
+    </fragment>
+    <fragment
+        android:id="@+id/seleccionarAsientos"
+        android:name="com.example.ponycinev2.SeleccionarAsientos"
+        android:label="Seleccione su asiento"
+        tools:layout="@layout/seleccionar_asientos_fragment" />
 </navigation>

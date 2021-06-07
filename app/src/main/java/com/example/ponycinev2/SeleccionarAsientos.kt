@@ -7,24 +7,24 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-class HorariosPelicula : Fragment() {
+class SeleccionarAsientos : Fragment() {
 
     companion object {
-        fun newInstance() = HorariosPelicula()
+        fun newInstance() = SeleccionarAsientos()
     }
 
-    private lateinit var viewModel: HorariosPeliculaViewModel
+    private lateinit var viewModel: SeleccionarAsientosViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.horarios_pelicula_fragment, container, false)
+        return inflater.inflate(R.layout.seleccionar_asientos_fragment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(HorariosPeliculaViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(SeleccionarAsientosViewModel::class.java)
         // TODO: Use the ViewModel
     }
 

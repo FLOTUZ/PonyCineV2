@@ -47,11 +47,11 @@ class MainActivity : AppCompatActivity() {
         horasDeExibicion.add(Exibicion("06/06/2021", "07:00pm"))
         horasDeExibicion.add(Exibicion("06/06/2021", "09:00pm"))
 
-        bd.peliculas.add(Pelicula(2, "Army Of Dead", R.drawable.armydead, horasDeExibicion))
-        bd.peliculas.add(Pelicula(3, "Army Of Dead", R.drawable.blackwidow, horasDeExibicion))
-        bd.peliculas.add(Pelicula(4, "Army Of Dead", R.drawable.mk, horasDeExibicion))
-        bd.peliculas.add(Pelicula(5, "Army Of Dead", R.drawable.spiderman, horasDeExibicion))
-        bd.peliculas.add(Pelicula(6, "Army Of Dead", R.drawable.suicidesquad2, horasDeExibicion))
+        bd.peliculas.add(Pelicula(1, "Army Of Dead", R.drawable.armydead, horasDeExibicion))
+        bd.peliculas.add(Pelicula(2, "Blackwidow", R.drawable.blackwidow, horasDeExibicion))
+        bd.peliculas.add(Pelicula(3, "Mortal Kombat", R.drawable.mk, horasDeExibicion))
+        bd.peliculas.add(Pelicula(4, "Spiderman No Way Home", R.drawable.spiderman, horasDeExibicion))
+        bd.peliculas.add(Pelicula(5, "The Suicide Squad", R.drawable.suicidesquad2, horasDeExibicion))
 
         viewModel.setBD(bd)
     }
