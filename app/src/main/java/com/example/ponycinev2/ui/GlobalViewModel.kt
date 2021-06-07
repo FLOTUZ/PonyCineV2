@@ -26,8 +26,8 @@ class GlobalViewModel : ViewModel() {
     val getHorarioSeleccionado: LiveData<Exibicion> get() = horarioSeleccionado
     val getAsientosSeleccionados: LiveData<ArrayList<Int>> get() = asientosSeleccionados
 
-    fun addAsientosSeleccionado(asiento: Int){
-        asientosSeleccionados.value?.add(asiento)
+    fun setAsientosSeleccionados(asiento: ArrayList<Int>){
+        asientosSeleccionados.value = asiento
     }
     fun setHorarioSeleccioado (horario: Exibicion){
         horarioSeleccionado.value = horario

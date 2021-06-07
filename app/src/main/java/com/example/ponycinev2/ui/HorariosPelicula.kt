@@ -10,10 +10,8 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.example.ponycinev2.R
 import com.example.ponycinev2.adapters.HorariosAdapter
-import com.example.ponycinev2.databinding.CarteleraFragmentBinding
 import com.example.ponycinev2.databinding.HorariosPeliculaFragmentBinding
 import com.example.ponycinev2.models.Exibicion
-import com.example.ponycinev2.models.Pelicula
 
 class HorariosPelicula : Fragment() {
 
@@ -33,11 +31,15 @@ class HorariosPelicula : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val lvsemestre1 = binding.lvHorarios
+        val lvHorarios = binding.lvHorarios
 
         viewModel.getPeliculaseleccionada.observe(viewLifecycleOwner, Observer { item ->
+
+            binding.imagenPelicula.setImageResource(item.img)
+            binding.tituloPelicula.text = item.nombre
+
             val lista = item.exibicion
-            lvsemestre1.adapter = object : HorariosAdapter(view.context, R.layout.card_exibicion, lista){
+            lvHorarios.adapter = object : HorariosAdapter(view.context, R.layout.card_exibicion, lista){
                 override fun seleccionarHorario(horario: Exibicion) {
                     viewModel.setHorarioSeleccioado(horario)
                     findNavController().navigate(R.id.action_horariosPelicula_to_seleccionarAsientos)
