@@ -43,9 +43,9 @@ class MainActivity : AppCompatActivity() {
         val bd = Gson().fromJson(bdString, DataBase::class.java) as DataBase
 
         val horasDeExibicion = ArrayList<Exibicion>()
-        horasDeExibicion.add(Exibicion("06/06/2021", "05:00pm"))
-        horasDeExibicion.add(Exibicion("06/06/2021", "07:00pm"))
-        horasDeExibicion.add(Exibicion("06/06/2021", "09:00pm"))
+        horasDeExibicion.add(Exibicion("Jun 06 2021", "05:00 pm"))
+        horasDeExibicion.add(Exibicion("Jun 06 2021", "07:00 pm"))
+        horasDeExibicion.add(Exibicion("Jun 07 2021", "09:00 pm"))
 
         bd.peliculas.add(Pelicula(1, "Army Of Dead", R.drawable.armydead, horasDeExibicion))
         bd.peliculas.add(Pelicula(2, "Blackwidow", R.drawable.blackwidow, horasDeExibicion))

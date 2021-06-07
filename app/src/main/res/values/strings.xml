@@ -10,15 +10,7 @@
     <string name="init_database">
         {
           "peliculas": [],
-          "compras": [
-            {
-              "id": 1,
-              "pelicula": 1,
-              "asientos": [1, 2],
-              "hora": "'00:00:00'",
-              "fecha": "'05-06-2021'"
-            }
-          ]
+          "compras": []
         }
     </string>
 </resources>

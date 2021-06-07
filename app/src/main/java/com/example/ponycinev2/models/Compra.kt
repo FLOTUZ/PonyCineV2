@@ -7,7 +7,7 @@ data class Compra(
     @SerializedName("id")
     val id: Int,
     @SerializedName("pelicula")
-    val pelicula: Int,
+    val pelicula: Pelicula,
     @SerializedName("asientos")
     val asientos: ArrayList<Int>,
     @SerializedName("hora")

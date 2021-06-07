@@ -37,11 +37,9 @@ class GlobalViewModel : ViewModel() {
         return dataBase.value?.compras?.get(id)
     }
 
-    fun addTiket(idPelicula: Int, asientos: ArrayList<Int>, hora: String, fecha: String) {
-        //Se crea un nuevo tiket
-        val tiket = Compra(dataBase.value?.compras!!.size+1, idPelicula, asientos, hora, fecha)
+    fun addTiket(compra: Compra) {
         //Se agrega a la base de datos
-        dataBase.value!!.compras.add(tiket)
+        dataBase.value!!.compras.add(compra)
     }
 
     fun setBD(bd: DataBase) {
