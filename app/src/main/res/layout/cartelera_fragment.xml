@@ -6,17 +6,6 @@
     android:orientation="vertical"
     tools:context=".ui.Cartelera">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Cartelera" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvCartelera"
         android:layout_width="match_parent"

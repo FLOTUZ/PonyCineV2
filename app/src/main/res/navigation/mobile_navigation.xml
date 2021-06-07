@@ -39,5 +39,15 @@
         android:id="@+id/seleccionarAsientos"
         android:name="com.example.ponycinev2.ui.SeleccionarAsientos"
         android:label="Seleccione su asiento"
-        tools:layout="@layout/seleccionar_asientos_fragment" />
+        tools:layout="@layout/seleccionar_asientos_fragment" >
+        <action
+            android:id="@+id/action_seleccionarAsientos_to_resumenCompra"
+            app:destination="@id/resumenCompra"
+            app:enterAnim="@android:anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/resumenCompra"
+        android:name="com.example.ponycinev2.ui.ResumenCompra"
+        android:label="resumen_compra_fragment"
+        tools:layout="@layout/resumen_compra_fragment" />
 </navigation>

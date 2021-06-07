@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.ponycinev2.R
 import com.example.ponycinev2.databinding.CarteleraFragmentBinding
 import com.example.ponycinev2.databinding.SeleccionarAsientosFragmentBinding
@@ -98,6 +99,10 @@ class SeleccionarAsientos : Fragment() {
                     println(it)
                 })
             }
+        }
+
+        binding.btnConfirmar.setOnClickListener {
+            findNavController().navigate(R.id.action_seleccionarAsientos_to_resumenCompra)
         }
 
     }
