@@ -48,6 +48,12 @@
     <fragment
         android:id="@+id/resumenCompra"
         android:name="com.example.ponycinev2.ui.ResumenCompra"
-        android:label="resumen_compra_fragment"
-        tools:layout="@layout/resumen_compra_fragment" />
+        android:label="Resumen de tu compra"
+        tools:layout="@layout/resumen_compra_fragment" >
+        <action
+            android:id="@+id/action_resumenCompra_to_miPerfil"
+            app:destination="@id/miPerfil"
+            app:enterAnim="@android:anim/fade_in"
+            app:popUpTo="@id/cartelera" />
+    </fragment>
 </navigation>
