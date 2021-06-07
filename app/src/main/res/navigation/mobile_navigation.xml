@@ -32,11 +32,12 @@
         tools:layout="@layout/horarios_pelicula_fragment" >
         <action
             android:id="@+id/action_horariosPelicula_to_seleccionarAsientos"
-            app:destination="@id/seleccionarAsientos" />
+            app:destination="@id/seleccionarAsientos"
+            app:enterAnim="@android:anim/slide_in_left" />
     </fragment>
     <fragment
         android:id="@+id/seleccionarAsientos"
-        android:name="com.example.ponycinev2.SeleccionarAsientos"
+        android:name="com.example.ponycinev2.ui.SeleccionarAsientos"
         android:label="Seleccione su asiento"
         tools:layout="@layout/seleccionar_asientos_fragment" />
 </navigation>

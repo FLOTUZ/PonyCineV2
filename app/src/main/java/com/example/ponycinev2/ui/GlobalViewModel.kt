@@ -14,6 +14,7 @@ class GlobalViewModel : ViewModel() {
     //-----------------------Datos de pelicula------------------------------------
     private val peliculaSeleccionada = MutableLiveData<Pelicula>()
     private val horarioSeleccionado = MutableLiveData<Exibicion>()
+    private val asientosSeleccionados = MutableLiveData<ArrayList<Int>>()
 
     //-----------------------Getters de las 'tablas' y la BD----------------------
     val getBD: LiveData<DataBase> get() = dataBase
@@ -23,8 +24,11 @@ class GlobalViewModel : ViewModel() {
     //------------Getters de las preferencias de seleccion de la funcion---------
     val getPeliculaseleccionada: LiveData<Pelicula> get() = peliculaSeleccionada
     val getHorarioSeleccionado: LiveData<Exibicion> get() = horarioSeleccionado
+    val getAsientosSeleccionados: LiveData<ArrayList<Int>> get() = asientosSeleccionados
 
-
+    fun addAsientosSeleccionado(asiento: Int){
+        asientosSeleccionados.value?.add(asiento)
+    }
     fun setHorarioSeleccioado (horario: Exibicion){
         horarioSeleccionado.value = horario
     }

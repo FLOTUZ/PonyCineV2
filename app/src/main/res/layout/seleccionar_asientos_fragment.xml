@@ -1,13 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SeleccionarAsientos">
+    android:background="#1D1D1D"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".ui.SeleccionarAsientos">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Seleccionar asiento" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Nombre pelicula"
+            android:textColor="#616161"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:src="@drawable/precio" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40sp"
+        android:src="@drawable/pantalla" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/silla1"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:background="#00000000"
+            android:rotation="15"
+            android:src="@drawable/silla"
+            android:layout_marginRight="30dp"
+            android:layout_marginEnd="30dp" />
+        <ImageButton
+            android:id="@+id/silla2"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:background="#00000000"
+            android:src="@drawable/silla" />
+        <ImageButton
+            android:id="@+id/silla3"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:background="#00000000"
+            android:rotation="-15"
+            android:src="@drawable/silla"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp" />
+
+    </LinearLayout>
+
 
 </LinearLayout>
